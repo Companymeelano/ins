@@ -1,0 +1,39 @@
+{
+  "packageId": "com.milano.app",
+  "host": "app.milano.example",
+  "name": "میلانو | استودیو هوشمند اینستاگرام",
+  "launcherName": "میلانو",
+  "display": "standalone",
+  "orientation": "portrait",
+  "themeColor": "#0a0510",
+  "navigationColor": "#0a0510",
+  "navigationColorDark": "#0a0510",
+  "navigationDividerColor": "#0a0510",
+  "navigationDividerColorDark": "#0a0510",
+  "backgroundColor": "#0a0510",
+  "enableNotifications": true,
+  "startUrl": "/?utm_source=twa",
+  "iconUrl": "https://app.milano.example/icons/icon-512.png",
+  "iconMaskableUrl": "https://app.milano.example/icons/maskable-512.png",
+  "webManifestUrl": "https://app.milano.example/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": { "enabled": false },
+    "playBilling": { "enabled": false },
+    "minimatch": { "enabled": false },
+    "nativeFacebookLogin": { "enabled": false },
+    "googlePlayApiDeprecated": { "enabled": false },
+    "googleLogin": { "enabled": false },
+    "indirectWebApp": { "enabled": false }
+  },
+  "shortcuts": [
+    { "name": "ساخت محتوا", "shortName": "ساخت", "url": "/?tab=create&utm_source=twa", "icon": "https://app.milano.example/icons/icon-192.png" },
+    { "name": "آنالیز پیج", "shortName": "آنالیز", "url": "/?tab=analytics&utm_source=twa", "icon": "https://app.milano.example/icons/icon-192.png" },
+    { "name": "کتابخانه", "shortName": "کتابخانه", "url": "/?tab=library&utm_source=twa", "icon": "https://app.milano.example/icons/icon-192.png" },
+    { "name": "استوری", "shortName": "استوری", "url": "/?tab=story&utm_source=twa", "icon": "https://app.milano.example/icons/icon-192.png" }
+  ],
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "minSdkVersion": 21,
+  "fingerprints": []
+}
