@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0510;
+  --card: #14101c;
+  --card2: #1a1524;
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+}
+
+html, body {
+  background: #0a0510;
+  color: #fff;
+  overscroll-behavior: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: Vazirmatn, system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.4s ease both; }
+
+/* شید متحرک روی دکمه‌های اختصاصی */
+.btn-sheen { position: relative; isolation: isolate; }
+.btn-sheen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.btn-sheen:hover::after { transform: translateX(120%); }
+
+/* پس‌زمینه محو برند در کل اپ */
+.app-aurora {
+  background:
+    radial-gradient(60vw 60vw at 80% -10%, rgba(236, 72, 153, 0.18), transparent 60%),
+    radial-gradient(50vw 50vw at -10% 10%, rgba(124, 58, 237, 0.18), transparent 60%),
+    #0a0510;
+}
+
+.glow-purple { box-shadow: 0 10px 40px -8px rgba(139,92,246,0.6); }
+.glow-pink { box-shadow: 0 8px 30px -6px rgba(236,72,153,0.7); }
+.glow-green { box-shadow: 0 10px 40px -8px rgba(16,185,129,0.5); }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #2a2437;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ec4899;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(236,72,153,0.8);
+}
